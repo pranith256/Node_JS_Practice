@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body{background: skyblue;font-family: verdana; color: #fff; padding: 30x;}
+            h1{font-size: 40px; text-transform: uppercase; letter-spacing: 1.5px; text-align: center;}
+            p, li {font-size: 15px;text-align: center;}
+        </style>
+    </head>
+    <body>
+        <%- include("./partials/nav.ejs") %>
+        <h1> This is the Profile of <%= name %> </h1>
+        <p> Id : <%= id%>, Name : <%= name%> </p>
+        <ul>
+            <% hobbies.forEach(function(item){ %>
+                <li><%= item %></li>
+            <% }) %>
+        </ul>
+    </body>
+</html>
